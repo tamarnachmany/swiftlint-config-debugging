@@ -1,0 +1,19 @@
+disabled_rules: # rule identifiers to exclude from running
+  - file_length
+  - function_body_length
+  - leading_whitespace
+  - line_length
+  - nesting
+  - operator_whitespace
+  - return_arrow_whitespace
+  - todo
+  - trailing_newline
+  - trailing_whitespace
+  - type_body_length
+  - type_name
+  - variable_name
+  - comma
+  - function_body_length
+  - statement_position
+excluded: # paths to ignore during linting. overridden by `included`.
+  - Pods

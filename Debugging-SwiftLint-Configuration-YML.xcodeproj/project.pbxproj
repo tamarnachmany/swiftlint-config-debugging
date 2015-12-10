@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		322BDBF91C1A02D0007A6D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BDBF81C1A02D0007A6D83 /* AppDelegate.swift */; };
 		322BDBFB1C1A02D0007A6D83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BDBFA1C1A02D0007A6D83 /* ViewController.swift */; };
-		322BDBFE1C1A02D0007A6D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322BDBFC1C1A02D0007A6D83 /* Main.storyboard */; };
 		322BDC001C1A02D0007A6D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322BDBFF1C1A02D0007A6D83 /* Assets.xcassets */; };
-		322BDC031C1A02D0007A6D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322BDC011C1A02D0007A6D83 /* LaunchScreen.storyboard */; };
 		322BDC0E1C1A02D0007A6D83 /* Debugging_SwiftLint_Configuration_YMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BDC0D1C1A02D0007A6D83 /* Debugging_SwiftLint_Configuration_YMLTests.swift */; };
 		322BDC191C1A02D0007A6D83 /* Debugging_SwiftLint_Configuration_YMLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BDC181C1A02D0007A6D83 /* Debugging_SwiftLint_Configuration_YMLUITests.swift */; };
 /* End PBXBuildFile section */
@@ -37,9 +35,7 @@
 		322BDBF51C1A02D0007A6D83 /* Debugging-SwiftLint-Configuration-YML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debugging-SwiftLint-Configuration-YML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		322BDBF81C1A02D0007A6D83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		322BDBFA1C1A02D0007A6D83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		322BDBFD1C1A02D0007A6D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		322BDBFF1C1A02D0007A6D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		322BDC021C1A02D0007A6D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		322BDC041C1A02D0007A6D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322BDC091C1A02D0007A6D83 /* Debugging-SwiftLint-Configuration-YMLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Debugging-SwiftLint-Configuration-YMLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		322BDC0D1C1A02D0007A6D83 /* Debugging_SwiftLint_Configuration_YMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugging_SwiftLint_Configuration_YMLTests.swift; sourceTree = "<group>"; };
@@ -99,9 +95,7 @@
 			children = (
 				322BDBF81C1A02D0007A6D83 /* AppDelegate.swift */,
 				322BDBFA1C1A02D0007A6D83 /* ViewController.swift */,
-				322BDBFC1C1A02D0007A6D83 /* Main.storyboard */,
 				322BDBFF1C1A02D0007A6D83 /* Assets.xcassets */,
-				322BDC011C1A02D0007A6D83 /* LaunchScreen.storyboard */,
 				322BDC041C1A02D0007A6D83 /* Info.plist */,
 			);
 			path = "Debugging-SwiftLint-Configuration-YML";
@@ -135,6 +129,7 @@
 				322BDBF11C1A02D0007A6D83 /* Sources */,
 				322BDBF21C1A02D0007A6D83 /* Frameworks */,
 				322BDBF31C1A02D0007A6D83 /* Resources */,
+				322BDC261C1A0384007A6D83 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -229,9 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322BDC031C1A02D0007A6D83 /* LaunchScreen.storyboard in Resources */,
 				322BDC001C1A02D0007A6D83 /* Assets.xcassets in Resources */,
-				322BDBFE1C1A02D0007A6D83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +243,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		322BDC261C1A0384007A6D83 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint lint --config \"${SRCROOT}/.swiftlint.yml\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		322BDBF11C1A02D0007A6D83 /* Sources */ = {
@@ -291,25 +301,6 @@
 			targetProxy = 322BDC151C1A02D0007A6D83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		322BDBFC1C1A02D0007A6D83 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				322BDBFD1C1A02D0007A6D83 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		322BDC011C1A02D0007A6D83 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				322BDC021C1A02D0007A6D83 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		322BDC1B1C1A02D0007A6D83 /* Debug */ = {
